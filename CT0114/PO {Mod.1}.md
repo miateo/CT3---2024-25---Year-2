@@ -23,3 +23,4 @@ Java is a imperative language, this type of language comes with some restriction
 	- Difficult to maintain all the copies
 	- A modification in a piece of duplicated code is not propagated to all the copies of the code!
 
+### Classloader

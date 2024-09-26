@@ -37,3 +37,11 @@ Descrive come i dati vengono memorizzati nelle memorie hw e contengono strutture
 Descrive la struttura degli insieme di dati e delle relazioni fra questi, seguendo un modello dei dati senza curarsi dell'effettiva organizzazione fisica nelle memorie hw
 ### Vista Logica
 Descrive come deve apparire la struttura della Base Dati ad una certa applicazione
+
+
+> [!NOTE]
+> Inizio utilizzo slide 2
+
+## Modellazione Concettuale
+nella Modellazione concettuale si progetta e definisce come i dati verranno gestiti e come sarà possibile interagire con essi;
+Si definiscono inoltre eventuali relazioni tra i dati
