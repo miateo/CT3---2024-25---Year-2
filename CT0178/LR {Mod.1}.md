@@ -1,3 +1,5 @@
+> Non sono presenti slide per questo corso in quanto il prof fa riferimento al libro
+
 ## Dati in Javascript
 ```Javascript
 	let a = 1;
@@ -59,7 +61,6 @@ crea un dizionario chiamato 'vec' la cui etichetta "0" = 3, "1" = 5, etc...;
 let vec.c = {a:1, b:2};
 ```
 Aggiunge al dizionario 'vec' un oggetto di tipo dizionario con etichetta 'c' con valori "a":1, "b":2;
-???
 
 ```Javascript
 let contains = z in o; //controlla che z sia contenuto nel dizionario 'o'
@@ -132,7 +133,8 @@ Effetti:
 		return l;
 	};
 	----
-	questo metodo istanzia una variabile this che punta a "vec" 
+	Il metodo sotto riportato di chiamata della funzione istanzia
+	una variabile this che punta a "vec" 
 	interno della scope della funzione, di conseguenza bisogna
 	cambiare le variabili in this.variabile
 	let vec = {x:1,y:2,
@@ -144,4 +146,30 @@ Effetti:
 		}
 	};
 	let l = vec.len();
+	
+	copia la funzione len di vec dentro v2
+	let v2 = {x:7, y:3, vec.len}
+	let t = vec.len -> t è una funzione uguale a vec.len
+
+	let vlen = function{return Math.sqrt(this.x^2 + this.y^2);};
+	let v3 = {x:4,y:9, len: vlen}; //-> assegna la funzione come terzo
+									// campo dell' oggetto
+	let l3 = v3.len();
+```
+
+## Prototype
+E' un metodo che permette di creare oggetti basati su oggetti già presenti in memoria, si richiama utilizzando il metodo predefinito Object.create({class}) dove class rappresenta il nome dell'oggetto che si vuole usare come prototipo.
+> molto simile all'eriditarietà in java -> si può accedere alla variabili definite nella classe "parent"
+>Utile per non ridefinire funzioni e riutilizzare codice: si accede al codice della funzione del parente ma le variabili vengono valorizzate in base ai campi presenti nell'oggetto "child" sempre se presenti
+
+```Javascript
+	let vec_p = {x:0,y:0, len: function(){
+		return Math.sqrt(this.x^2 + this.y^2);}
+	};
+	let l = vec_p.len();
+	let v1 = Object.create(vec_p), //func predefinita che crea un nuovo oggetto -> seguendo come prototipo l'oggetto passato
+	<-questo istanzia una proprietà che punta a vec_p <-non è accessibile
+	let val;
+	val = v1.x; //ritorna il campo x, se il campo non è presente lo cerca nel suo prototype
+	
 ```
