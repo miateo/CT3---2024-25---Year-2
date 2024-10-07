@@ -173,3 +173,9 @@ E' un metodo che permette di creare oggetti basati su oggetti già presenti in m
 	val = v1.x; //ritorna il campo x, se il campo non è presente lo cerca nel suo prototype
 	
 ```
+
+> [!Note] Appunti 04-10-2024
+> Da aggiungere
+
+____
+Lezione 07-10-2024
