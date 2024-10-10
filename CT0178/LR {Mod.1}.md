@@ -179,3 +179,4 @@ E' un metodo che permette di creare oggetti basati su oggetti già presenti in m
 
 ____
 Lezione 07-10-2024
+Vedere cartella dentro js-proj
