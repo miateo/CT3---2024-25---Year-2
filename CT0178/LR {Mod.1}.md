@@ -177,6 +177,11 @@ E' un metodo che permette di creare oggetti basati su oggetti già presenti in m
 > [!Note] Appunti 04-10-2024
 > Da aggiungere
 
-____
-Lezione 07-10-2024
-Vedere cartella dentro js-proj
+> [!Note] Lezione 07-10-2024 al 09-10-2024
+> File "07-10-2024"
+
+> [!N] Lezione 14-10-2024 al 
+> File "14-10-2024"
+
+
+---

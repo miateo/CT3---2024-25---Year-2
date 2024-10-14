@@ -7,8 +7,18 @@ let baseBankAccount = {
 };
 
 let BankAccount = function (amount, owner) {
-  this.amount = amount;
-  this.owner = owner;
+  if (typeof amount === "object") {
+    [owner, amount] = [amount.owner, amount.amount];
+    //owner = amount.owner;
+    //amount = amount.amount;
+  }
+  if (amount) {
+    if (typeof amount != "number") throw "Wrong parameter, expected Number";
+    this.amount = amount;
+  }
+  if (owner) {
+    this.owner = owner;
+  }
 };
 BankAccount.prototype = baseBankAccount;
 
@@ -19,3 +29,10 @@ let check1 = ba1 instanceof BankAccount;
 
 let ba2 = new BankAccount();
 ba2.add(100);
+
+try {
+  let ba3 = new BankAccount({ amount: 110, owner: "Pippo" });
+  ba3.add(200);
+} catch (e) {
+  console.log(e);
+}
