@@ -183,5 +183,40 @@ E' un metodo che permette di creare oggetti basati su oggetti già presenti in m
 > [!N] Lezione 14-10-2024 al 
 > File "14-10-2024"
 
+### Lezione 16-10-2024
+file: "16-10-2024"
+
+```Javascript
+let a = 1;
+let b = 2;
+let incr = function(){
+ let result = a;
+ result = result+1;
+ return result;
+};
+a=incr();
+a=incr();
+```
+Questo codice funziona ed a viene trovato poiché mi trovo nello scope Global quando eseguo la call della funzione ed esiste un puntatore all'interno dello scope della funzione che punta al superscope e cerca (come avviene con i prototype) eventuali variabili non presenti nello scope diretto, trovando quindi la variabile a.
+> Questo codice non funzionerebbe nel caso la funzione venga eseguita in uno scope come il seguente esempio
+> ```Javascript
+> 	let createCounter(){
+> 		let base = 0;
+> 		let c = function{
+> 			let newVal = base;
+> 			base = newVal;
+> 			return newVal;
+> 		};
+> 		return c;
+> 	};
+> 	let c1 = createCounter(); //<- Def di c1
+> 	let c2 = createCounter(); //<- Def di c2
+> 	let v = c1(); //<- Call di c1
+> 	v = c2(); //<- Call di c2
+> 	v = c1();
+> 	v = c2();
+> ```
+> In questo esempio inizialmente le scope di createCounter rimangono attive perché ancorate dalla funzione c che viene ritornata a c1 e c2
+> Il codice funziona ma il valore di base ogni volta viene incrementato poiché alla fine di ogni chiamata di c1() o c2() lo scope della funzione viene rimosso ma il super-scope persiste poiché è puntato dalla definizione di c1 e c2 che hanno rispettivamente due valori 'base' diversi poiché hanno scope differenti
 
 ---
