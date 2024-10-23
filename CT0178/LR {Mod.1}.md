@@ -1,3 +1,7 @@
+tags: #uni #notes #Year2 
+
+---
+
 > Non sono presenti slide per questo corso in quanto il prof fa riferimento al libro
 
 ## Dati in Javascript
@@ -220,3 +224,30 @@ Questo codice funziona ed a viene trovato poiché mi trovo nello scope Global qu
 > Il codice funziona ma il valore di base ogni volta viene incrementato poiché alla fine di ogni chiamata di c1() o c2() lo scope della funzione viene rimosso ma il super-scope persiste poiché è puntato dalla definizione di c1 e c2 che hanno rispettivamente due valori 'base' diversi poiché hanno scope differenti
 
 ---
+
+Lezione 23-10-2024
+
+1 - Iterabile -> oggetto che contiene i dati che voglio scorrere
+```Javascript
+let obj = {[Symbols.iterator](){}};
+```
+questo metodo ritorna un iteratore
+2 - Iterator -> oggetto che contiene un metodo next() che ritorna l'elemento successivo che è un *Iterator Result*
+3 - Iterator Result può contenere il campo value, il campo done:Bool che è sempre presente.
+
+function* -> ritorna più valori
+```Javascript
+let function* numSequence(){
+	yeld 5;
+	yeld 7;
+	yeld "pippo";
+}
+for(let n of numSequence())
+	console.log(n);
+/*
+risultato:
+5
+7
+pippo
+*/
+```

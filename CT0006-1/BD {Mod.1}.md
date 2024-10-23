@@ -1,4 +1,4 @@
-tags: #uni #notes
+tags: #uni #notes #Year2 
 
 ---
 
@@ -193,3 +193,51 @@ Gli attributi all'interno delle classi possono avere diversi tipi:
 Le associazioni vengono modellate secondo un apposito costrutto e possono avere proprietà, essere ricorsive ed essere in relazioni n-arie
 
 > (Vedi slide 40 a 44 per un esempio pratico)
+
+> [!N] Need to make notes
+
+---
+> Lezione 03/10/2024: [[Schema Universita'.pdf]]
+---
+
+Lezione 10/10/2024
+Slides: ![[4.ModelloRelazionale.pdf]]
+### Modello Relazionale
+- *Relazione*: Sottoinsieme del prodotto cartesiano di 'n' domini
+- *Enupla* : Sequenza di valori che appartiene alla relazione di un rispettivo dominio
+  > Il grado di un'enupla corrisponde al numero di attributi distinti
+
+![[Enuple e Relazioni.png|500]]
+- *Schema Relazione*: Assegnazione di un nome alla relazione es: Studente:{T1}
+- *Istanza di schema o relazione*: Insieme finito di enuple di tipo T
+  > Cardinalita': numero di enuple
+
+### Chiavi
+- *SuperChiave*: Sottoinsieme di attributi tale che il valore di essi determina in maniera univoca un'enupla
+  > L'insieme di tutti gli attributi di un'enupla e' una superchiave
+- *Chiave*: Attributi primi di una superchiave
+- *Chiave Primaria (PK)*: Chiave di lunghezza minima(solitamente 1 attributo) che identifica in maniera univoca un'enupla
+- *Chiave Esterna (FK)*: Insieme di attributi che riferisce la chiave primaria di un'enupla(esterna alla nostra corrente tabella)
+  > Puo' assumere solo valori presenti all'interno della relazione riferita
+  
+Lezione 11/10/2024
+slides n.27 ![[4.ModelloRelazionale.pdf]]
+
+Soluzioni per trasformare gerarchie nel modello relazionale
+- Relazione Unica
+  > Comodo quando sono presenti pochi elementi
+- Partizionamento Verticale: le relazioni vengono mantenute ed ognuna mantiene i propri attributi specifici e possiede delle *FK* che puntano alla superclasse
+  > Complica il recupero delle informazioni di tutte le relazioni a causa delle foreign key
+- Partizionamento Orizzontale: Ogni sottoclasse e' una relazione a se stante e possiede oltre agli attributi specifici ad essa quelli della superclasse, il cio' crea ridondanza
+  Superclasse => Possiede solo i  suoi attributi
+  Sottoclassi => Possiedono i loro attributi + gli attributi della superclasse
+  > Utilizzabile solo quando non devo riferire la superclasse o quando c'e' disgiunzione
+
+![[Sequenze da concettuale a relazionele.png|700]]
+
+### Algebra Relazionale
+Formata da:
+- **Operatori Primitivi**: Unione, Diff, Prodotto
+- **Operatori Derivati**: Divisione, giunzione
+- **Operatori di Tabella**: min, max, order by
+![[Notazione.png|750]]
