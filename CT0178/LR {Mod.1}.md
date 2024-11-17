@@ -251,3 +251,7 @@ risultato:
 pippo
 */
 ```
+
+---
+Lezione 06-11-2024
+

@@ -241,3 +241,4 @@ Formata da:
 - **Operatori Derivati**: Divisione, giunzione
 - **Operatori di Tabella**: min, max, order by
 ![[Notazione.png|750]]
+![[Lezione 24-10-2024.png|750]]
