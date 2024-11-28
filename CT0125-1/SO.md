@@ -76,7 +76,7 @@ Sistemi costituiti da unità di elaborazione fisicamente separate ma interconnes
 
 ## **Middleware**
 
-Il middleware è un software che si colloca tra le applicazioni e le componenti sottostanti, come ad esempio sistemi operativi, database o hardware, e/o permette l'interazione di software distribuito.
+Il middleware è un software che si colloca tra le applicazioni e le componenti sottostanti, come ad esempio: sistemi operativi, database o hardware, e/o permette l'interazione di software distribuito.
 
 ## **Servizi Web**
 
@@ -119,7 +119,7 @@ Il middleware è un software che si colloca tra le applicazioni e le componenti 
 
 **CPU**
 
-- **Modalità CPU:**
+- **Modalità  della CPU:**
     - Utente: per eseguire applicazioni.
     - Kernel: per operazioni privilegiate.
 - Esecuzione di istruzioni in linguaggio macchina.
@@ -160,7 +160,7 @@ Il middleware è un software che si colloca tra le applicazioni e le componenti 
     - **ROM:** memoria non volatile, programmata dal costruttore.
         - **EEPROM:** riscrivibile ma lenta.
         - **CMOS:** utilizzata per configurazioni base, volatile.
-    - **memoria secondaria** - dischi
+    - **Memoria secondaria** - dischi
         - la memoria secondario conserva grandi quantità (capacità) di dati persistenti (non volatili) a basso costo ma l’accesso è più lento
 	    **Gestione dell’ I/O : tre modalità:**
 		- **busy waiting** : chiamate di sistema -> chiamate al driver -> avvio I/O -> attesa attiva di fine I/O
@@ -186,7 +186,7 @@ Il middleware è un software che si colloca tra le applicazioni e le componenti 
 
 ### **Velocità del BUS**
 
-- Misurata in MHz (10⁶ Hz) in GHz (10⁹ Hz).
+- Misurata in MHz (10⁶ Hz) o in GHz (10⁹ Hz).
 - PCIe (Peripheral Component Interconnect Express):
     - Collega CPU e dispositivi, con velocità fino a 64 Gbps.
 - USB (Universal Serial Bus):
@@ -505,7 +505,7 @@ Struttura del sistema VM/370 con CMS:
 # Modulo 1 Capitolo 2
 ### **Introduzione al concetto di processo**
 
-- i sistemi eseguono operazioni concorrentemente
+- I sistemi eseguono operazioni concorrentemente
 - **Caratteristiche dei processi**:
     - Consentono di gestire attività simultanee.
     - Cambiano stato.
@@ -564,7 +564,7 @@ Servizi forniti dai SO per la gestione dei processi:
     - **Windows**:
         - Uso della funzione `CreateProcess` per creare e caricare direttamente il processo.
 3. **Spazi separati**:
-    - In Unix: il figlio copia lo spazio del padre.
+    - In Unix: il processo figlio ha uno spazio di memoria virtuale **indipendente**, inizialmente identico al processo padre. Eventuali modifiche alla memoria non influenzano l’altro processo grazie al **Copy-on-Write**.
     - In Windows: il figlio ha uno spazio indipendente fin dall’inizio.
 
 ### Chiusura dei Processi
@@ -593,7 +593,7 @@ Servizi forniti dai SO per la gestione dei processi:
 ### Stati dei Processi: Ciclo di Vita
 
 1. **Stati principali**:
-    - **Running**: Il processo è in esecuzione.
+    - **Running** o **Executing**: Il processo è in esecuzione.
     - **Ready**: Il processo è pronto a essere eseguito se un processore è disponibile.
     - **Blocked**: In attesa di un evento esterno.
         
@@ -605,10 +605,6 @@ Servizi forniti dai SO per la gestione dei processi:
 3. **Eventi di transizione**:
     - Blocco per attesa di input.
     - Risveglio a seguito di eventi esterni (es: input ricevuto).
-
-parte sotto da controllare e rivedere 
-
-arrivato a **12/10/2022**
 
 ### **Stati di processo e transizioni fra stati**
 
@@ -669,7 +665,7 @@ arrivato a **12/10/2022**
 ### **5. Interrupts**
 
 - **Tipi di interrupt**:
-    - **Sinceri (trap)**: sincroni con il processo, es. divisione per zero.
+    - **Sinceri**: Generati dai processi e chiamati **trap** sincroni con il processo, es. divisione per zero.
     - **Asincroni**: es. pressione di un tasto.
 - **Gestione**:
     - Completare l'istruzione corrente.
@@ -688,9 +684,9 @@ arrivato a **12/10/2022**
     - **Message passing**:
         - Scambio diretto di messaggi (bloccanti o non bloccanti).
         - Implementazione comune: **pipe**.
-    - **IPC in sistemi distribuiti**:
-        - Problemi di corruzione o perdita di messaggi.
-        - Importanza della sicurezza e autenticazione.
+	    - **IPC in sistemi distribuiti**:
+	        - Problemi di corruzione o perdita di messaggi.
+	        - Importanza della sicurezza e autenticazione.
 
 ### **7. Processo UNIX**
 
@@ -703,3 +699,4 @@ arrivato a **12/10/2022**
     - Valori numerici da -20 (alta) a 19 (bassa).
 - **Chiamate di sistema UNIX**:
     - **Fork**: crea un processo figlio (condivide file aperti del padre).
+
