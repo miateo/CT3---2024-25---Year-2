@@ -37,4 +37,5 @@ ehthumbs.db
 Thumbs.db
 
 # Personal Folders
-CT0114/test/
+**/CT0114/test/
+**/CT0114/CardGameJava/
