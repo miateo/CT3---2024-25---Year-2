@@ -242,3 +242,6 @@ Formata da:
 - **Operatori di Tabella**: min, max, order by
 ![[Notazione.png|750]]
 ![[Lezione 24-10-2024.png|750]]
+
+---
+![[28-11-2024.md]]
