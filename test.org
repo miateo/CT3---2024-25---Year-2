@@ -1,0 +1,27 @@
+#+title: TEST ORG MODE
+#+description: Org mode document for test
+#+author: Miatello Alessandro
+
+* A new headline
+fold lines: TAB
+unfold: TAB or SHIFT TAB
+** Level 2
+*** lv3
+**** level 4
+** lev 2(1)
+* Getting started in orgmode
+Meta key = option or alt
+Read org mode manual with M-x org-info
+make text to heading: SPC m h
+make text to list item: SPC m I
+insert snippets with SPC-i-s
+SPC-m-t to change a TODO item
+** TODO example 1
+** for checkbox
+same as obsidiand - [ ] something,
+you can use C-c or RET to change the state
+** for the tables is the same as obsidian but there's no need to put a '-' between rows
+| somethign                          | 2    | 3                      |
+|------------------------------------+------+------------------------|
+| something else                     | wow  | auto adjust row witdth |
+| you can add a horizontal separator | with | SPC m b -              |

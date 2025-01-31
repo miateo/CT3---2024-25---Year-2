@@ -255,3 +255,30 @@ pippo
 ---
 Lezione 06-11-2024
 
+---
+
+#### Destructuring Assignment
+In a destructuring assignment, the value on the righthand side of the equals sign is an array or object (a “structured” value), and the lefthand side specifies one or more variable names using a syntax that mimics array and object literal syntax. When a destructuring assignment occurs, one or more values are extracted (“destructured”) from the value on the right and stored into the variables named on the left.
+```Javascript
+	let [x,y] = [1,2]; // Same as let x=1, y=2
+	[x,y] = [x+1,y+1]; // Same as x = x + 1, y = y + 1
+```
+it can also be used to return array of values
+```Javascript
+	// Convert [x,y] coordinates to [r,theta] polar coordinates
+	function toPolar(x, y) {
+		return [Math.sqrt(x*x+y*y), Math.atan2(y,x)];
+	}
+	
+	// Convert polar to Cartesian coordinates
+	function toCartesian(r, theta) {
+		return [r*Math.cos(theta), r*Math.sin(theta)];
+	}
+```
+or to loop through pairs of objects
+```Javascript
+	let o = { x: 1, y: 2 }; // The object we'll loop over
+	for(const [name, value] of Object.entries(o)) {
+		console.log(name, value); // Prints "x 1" and "y 2"
+	}
+```
