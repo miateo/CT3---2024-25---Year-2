@@ -1,0 +1,1 @@
+Per interazione si intende il processo nel quale la persona e il calcolatore comunicano
