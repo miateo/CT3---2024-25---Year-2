@@ -197,7 +197,9 @@ Le associazioni vengono modellate secondo un apposito costrutto e possono avere 
 > [!N] Need to make notes
 
 ---
-> Lezione 03/10/2024: [[Schema Universita'.pdf]]
+> Lezione 03/10/2024: 
+![[Schema Universita'.pdf]]
+
 ---
 
 Lezione 10/10/2024
@@ -212,6 +214,19 @@ Slides: ![[4.ModelloRelazionale.pdf]]
 - *Istanza di schema o relazione*: Insieme finito di enuple di tipo T
   > Cardinalita': numero di enuple
 
+#### Trasformazione cardinalita' da Oggetti a Relazionale
+![[FromERToRelationalModel.pdf]]
+**Caso 1: Relazioni 1:1**
+- La chiave primaria di una tabella può essere una **chiave esterna** nell’altra tabella, oppure si possono **unificare le due entità** in un’unica tabella.
+- Se la relazione è opzionale su un lato, si usa una chiave esterna nullable.
+- Se è obbligatoria su entrambi i lati, si usa una chiave esterna con vincolo di unicità.
+
+**Caso 2: Relazioni 1:N**
+- La chiave primaria dell’entità “uno” diventa chiave esterna nell’entità “molti”.
+
+**Caso 3: Relazioni N:M**
+- Si introduce una **tabella intermedia** con due chiavi esterne, ciascuna riferita a una delle entità coinvolte.
+
 ### Chiavi
 - *SuperChiave*: Sottoinsieme di attributi tale che il valore di essi determina in maniera univoca un'enupla
   > L'insieme di tutti gli attributi di un'enupla e' una superchiave
@@ -221,7 +236,7 @@ Slides: ![[4.ModelloRelazionale.pdf]]
   > Puo' assumere solo valori presenti all'interno della relazione riferita
   
 Lezione 11/10/2024
-slides n.27 ![[4.ModelloRelazionale.pdf]]
+Slides: ![[4.ModelloRelazionale.pdf#page=27]]
 
 Soluzioni per trasformare gerarchie nel modello relazionale
 - Relazione Unica
@@ -240,6 +255,9 @@ Formata da:
 - **Operatori Primitivi**: Unione, Diff, Prodotto
 - **Operatori Derivati**: Divisione, giunzione
 - **Operatori di Tabella**: min, max, order by
+
+Slides: ![[4.ModelloRelazionaleDapubb.pdf#page=47]]
+
 ![[Notazione.png|750]]
 ![[Lezione 24-10-2024.png|750]]
 
